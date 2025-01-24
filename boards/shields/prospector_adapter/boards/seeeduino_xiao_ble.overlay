@@ -58,7 +58,7 @@ disp_spi: &spi3 {
        cmd-data-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
        reset-gpios = <&xiao_d 3 GPIO_ACTIVE_LOW>;
        width = <240>;
-       height = <280>;
+       height = <240>;
        x-offset = <0>;
        y-offset = <20>;
        vcom = <0x19>;
