@@ -244,8 +244,10 @@ static int st7789v_set_orientation(const struct device *dev,
 
 	// if (config->width < 240) {
 		/* 135x240 display */
-		row_offset = data->y_offset;
-		col_offset = data->x_offset;
+		// row_offset = data->y_offset;
+		// col_offset = data->x_offset;
+	row_offset = (320 - config->height);
+	col_offset = (240 - config->width);
 	// } else {
 	// 	/* 240x320 and 240x240 displays */
 	// 	row_offset = (320 - config->height);
@@ -477,3 +479,4 @@ static const struct display_driver_api st7789v_api = {
 			      CONFIG_DISPLAY_INIT_PRIORITY, &st7789v_api);
 
 DT_INST_FOREACH_STATUS_OKAY(ST7789V_INIT)
+
